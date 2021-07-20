@@ -24,7 +24,7 @@ class BitSongMain extends React.Component {
      */
     componentDidMount() {
 
-        fetch('http://public-rpc.regen.vitwit.com:1317/staking/validators/'+this.props.name,
+        fetch('https://bitsong.stakesystems.io/staking/validators/'+this.props.name,
         {
             method: "GET",
             mode: 'cors'
@@ -46,18 +46,20 @@ class BitSongMain extends React.Component {
      * Render UI
      */
     render() {
-
+        var link = this.props.name
+        link = 'https://bitsong.stakesystems.io/staking/validators/' + link
+        console.log("LINK : " , link)
         const { isLoaded, items } = this.state;
         console.log("BITSONG : ", items)
         if (!isLoaded)
             return (
-<div className="card mb-4 rounded-3 shadow-sm border-primary">
-<div className="card-header py-3 text-white bg-primary border-primary">
-<h4 className="my-0 fw-normal">Bit Song</h4>
-</div>
-<div className="card-body"><h1 className="card-title pricing-card-title"><small className="text-muted fw-light">Loading ...</small></h1>
-</div>
-</div>
+        <div className="card mb-4 rounded-3 shadow-sm border-primary">
+        <div className="card-header py-3 text-white bg-primary border-primary">
+        <h4 className="my-0 fw-normal">Bit Song</h4>
+        </div>
+        <div className="card-body"><h1 className="card-title pricing-card-title"><small className="text-muted fw-light">Loading ...</small></h1>
+        </div>
+        </div>
 );
 
     return (
@@ -67,13 +69,15 @@ class BitSongMain extends React.Component {
         </div>
         <div className="card-body">
         {items.result.description.moniker}
-        <h1 className="card-title pricing-card-title">{Math.round(items.result.tokens/1000000).toFixed(0)}<small className="text-muted fw-light">kava</small></h1>
+        <h1 className="card-title pricing-card-title">{Math.round(items.result.tokens/1000000).toFixed(0)}<small className="text-muted fw-light">btsg</small></h1>
         <ul className="list-unstyled mt-3 mb-4">
         <li>Block # {items.height}</li>
         <li>Jailed : {items.result.jailed.toString()}</li>
         <li>Commision : {items.result.commission.commission_rates.rate*100} %</li>
         </ul>
+        <a href={link}>
         <button type="button" className="w-100 btn btn-lg btn-primary">More Info</button>
+        </a>
         </div>
         </div>
         );

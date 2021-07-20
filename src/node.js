@@ -56,6 +56,10 @@ class Node extends React.Component {
 );
     return (
 <ul className="list-group mb-3">
+<li className="list-group-item d-flex justify-content-between">
+            <span>API</span>
+            <strong>{this.props.name}</strong>
+            </li>
             <li className="list-group-item d-flex justify-content-between">
             <span>RAM Free</span>
             <strong>{Math.round((items.ram.free)/1000000).toFixed(0)} Mb</strong>

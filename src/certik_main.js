@@ -47,18 +47,20 @@ class CertikMain extends React.Component {
      * Render UI
      */
     render() {
-
+        var link = this.props.name
+        link = 'https://certik.stakesystems.io/staking/validators/' + link
+        console.log("LINK : " , link)
         const { isLoaded, items } = this.state;
         console.log("CERTIK : ",items)
         if (!isLoaded)
             return (
-<div className="card mb-4 rounded-3 shadow-sm border-primary">
-<div className="card-header py-3 text-white bg-primary border-primary">
-<h4 className="my-0 fw-normal">Certik</h4>
-</div>
-<div className="card-body"><h1 className="card-title pricing-card-title"><small className="text-muted fw-light">Loading ...</small></h1>
-</div>
-</div>
+        <div className="card mb-4 rounded-3 shadow-sm border-primary">
+        <div className="card-header py-3 text-white bg-primary border-primary">
+        <h4 className="my-0 fw-normal">Certik</h4>
+        </div>
+        <div className="card-body"><h1 className="card-title pricing-card-title"><small className="text-muted fw-light">Loading ...</small></h1>
+        </div>
+        </div>
 );
 
     return (
@@ -74,7 +76,9 @@ class CertikMain extends React.Component {
         <li>Jailed : {items.result.jailed.toString()}</li>
         <li>Commision : {items.result.commission.commission_rates.rate*100} %</li>
         </ul>
+        <a href={link}>
         <button type="button" className="w-100 btn btn-lg btn-primary">More Info</button>
+        </a>
         </div>
         </div>
         );
