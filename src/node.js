@@ -93,20 +93,31 @@ class Node extends React.Component {
             </li>
             <li className="list-group-item d-flex justify-content-between">
              <span>Mount Point [ {items.disks[1].mountPoint} ]</span>
-            <strong>{Math.round((items.disks[1].percent)).toFixed(0)}</strong>
+            {
+                Math.round((items.disks[1].percent)).toFixed(0) > 85 && 
+                <strong class="text-danger">{Math.round((items.disks[1].percent)).toFixed(0)}</strong>
+            }
+            {
+                Math.round((items.disks[1].percent)).toFixed(0) < 85 && 
+                <strong>{Math.round((items.disks[1].percent)).toFixed(0)}</strong>
+            }
             </li>
             <li className="list-group-item d-flex justify-content-between">
             <span>CPU %</span>
-            <strong>{Math.round((items.cpu.usage))} %</strong>
+            {
+               Math.round(items.cpu.usage) < 33 && 
+               <strong>{Math.round((items.cpu.usage))} %</strong>
+            }
+             {
+               Math.round(items.cpu.usage) > 33 && 
+               <strong class="text-danger">{Math.round((items.cpu.usage))} %</strong>
+            }
             </li>
             <li className="list-group-item d-flex justify-content-between">
             <span>Uptime</span>
             <strong>{Math.round((items.hostInfo.uptime)/60/60/24).toFixed(0)} Days</strong>
             </li>
         </ul>
-      
- 
-      
         );   
     }
 } 
