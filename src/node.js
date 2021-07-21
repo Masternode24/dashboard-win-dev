@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Node extends React.Component { 
      /**
      * constructor
@@ -54,12 +55,14 @@ class Node extends React.Component {
             </li>
             </ul>
 );
+
+
     return (
 <ul className="list-group mb-3">
-<li className="list-group-item d-flex justify-content-between">
-            <span>API</span>
-            <strong>{this.props.name}</strong>
-            </li>
+
+<a href={this.props.name} class="list-group-item list-group-item-action list-group-item-light" aria-current="true">
+   [ Full API ]
+  </a>
             <li className="list-group-item d-flex justify-content-between">
             <span>RAM Free</span>
             <strong>{Math.round((items.ram.free)/1000000).toFixed(0)} Mb</strong>
@@ -100,7 +103,10 @@ class Node extends React.Component {
             <span>Uptime</span>
             <strong>{Math.round((items.hostInfo.uptime)/60/60/24).toFixed(0)} Days</strong>
             </li>
-            </ul>
+        </ul>
+      
+ 
+      
         );   
     }
 } 

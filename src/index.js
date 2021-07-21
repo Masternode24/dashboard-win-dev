@@ -118,21 +118,21 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://176.9.47.69:3000" />
+    <Node name="http://116.203.94.19:3000" />
   </React.StrictMode>,
   document.getElementById('node_7')
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://176.9.47.69:3000" />
+    <Node name="http://202.61.254.31:3000" />
   </React.StrictMode>,
   document.getElementById('node_8')
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://176.9.47.69:3000" />
+    <Node name="http://157.90.233.172:3000" />
   </React.StrictMode>,
   document.getElementById('node_9')
 );

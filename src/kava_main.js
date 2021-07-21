@@ -43,7 +43,7 @@ class KavaMain extends React.Component {
      */
     render() {
         var link = this.props.name
-        link = 'https://lcd.terra.dev/staking/validators/' + link
+        link = 'https://kava4.data.kava.io/staking/validators/' + link
         console.log("LINK : " , link)
         const { isLoaded, items } = this.state;
         console.log(items)
