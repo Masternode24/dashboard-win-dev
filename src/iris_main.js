@@ -68,7 +68,7 @@ class IRISMain extends React.Component {
         {items.validator.description.moniker}
         <h1 className="card-title pricing-card-title">{Math.round(items.validator.tokens/1000000).toFixed(0)}<small className="text-muted fw-light">iris</small></h1>
         <ul className="list-unstyled mt-3 mb-4">
-        <li>Block # {items.height}</li>
+        <li>Block # No Info</li>
         <li>Jailed : {items.validator.jailed.toString()}</li>
         <li>Commision : {items.validator.commission.commission_rates.rate*100} %</li>
         </ul>

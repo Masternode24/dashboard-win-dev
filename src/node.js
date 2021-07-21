@@ -72,7 +72,7 @@ class Node extends React.Component {
             <strong>{Math.round((items.ram.total)/1000000).toFixed(0)} Mb</strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
-            <span>RAM Usage</span>
+            <span>RAM Used</span>
             <strong>{Math.round((items.ram.usage)/1000000).toFixed(0)} Mb</strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
