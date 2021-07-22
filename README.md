@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Install and Activate Chrome CORS-Unlock Ext.
+### Install Chrome CORS-Unlock Ext.
 https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino?hl=en
 
 ### Intall Git for Windows
