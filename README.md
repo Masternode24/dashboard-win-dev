@@ -27,10 +27,12 @@ $ cd dashboard-win-dev
 ```
 $ npm i
 ```
+
 ### Run Dashboard 
 ```
 $ npm start
 ```
+
 ### Make Production Build
 ```
 $ npm build
