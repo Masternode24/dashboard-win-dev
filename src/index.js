@@ -83,7 +83,7 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://45.9.60.250:3000" />
+    <Node name="http://202.61.198.225:3000" />
   </React.StrictMode>,
   document.getElementById('node_2')
 );
