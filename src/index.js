@@ -9,6 +9,9 @@ import { IRISMain } from './iris_main';
 import { CertikMain } from './certik_main';
 import { RegenMain } from './regen_main';
 import { BitSongMain } from './bitsong_main';
+import { VelasMain } from './velas_main';
+import { SolanaMain } from './solana_main';
+import { PolkadotMain } from './polkadot_main';
 import { Node } from './node';
 
 ReactDOM.render(
@@ -76,6 +79,27 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
+    <VelasMain name="iva1az3y7j3ncfxude5t9n9sry39acgn7dpejds8gf" />
+  </React.StrictMode>,
+  document.getElementById('velas_1')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <SolanaMain name="iva1az3y7j3ncfxude5t9n9sry39acgn7dpejds8gf" />
+  </React.StrictMode>,
+  document.getElementById('solana_1')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <PolkadotMain name="iva1az3y7j3ncfxude5t9n9sry39acgn7dpejds8gf" />
+  </React.StrictMode>,
+  document.getElementById('polkadot_1')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
     <Node name="http://202.61.253.70:3000" />
   </React.StrictMode>,
   document.getElementById('node_1')
@@ -135,6 +159,27 @@ ReactDOM.render(
     <Node name="http://157.90.233.172:3000" />
   </React.StrictMode>,
   document.getElementById('node_9')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://162.55.242.56:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_10')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://162.55.242.56:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_11')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://162.55.242.56:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_12')
 );
 
 // If you want to start measuring performance in your app, pass a function
