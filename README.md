@@ -1,4 +1,4 @@
-## Getting Started with JS Dashboard App
+## Getting Started with JS Dashboard App!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
