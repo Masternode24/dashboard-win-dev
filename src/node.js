@@ -60,7 +60,7 @@ class Node extends React.Component {
     return (
 <ul className="list-group mb-3">
 
-<a href={this.props.name} class="list-group-item list-group-item-action list-group-item-light" aria-current="true">
+<a href={this.props.name} className="list-group-item list-group-item-action list-group-item-light" aria-current="true">
    [ Full API ]
   </a>
             <li className="list-group-item d-flex justify-content-between">
@@ -95,7 +95,7 @@ class Node extends React.Component {
              <span>Mount Point [ {items.disks[1].mountPoint} ]</span>
             {
                 Math.round((items.disks[1].percent)).toFixed(0) > 85 && 
-                <strong class="text-danger">{Math.round((items.disks[1].percent)).toFixed(0)}</strong>
+                <strong className="text-danger">{Math.round((items.disks[1].percent)).toFixed(0)}</strong>
             }
             {
                 Math.round((items.disks[1].percent)).toFixed(0) < 85 && 
@@ -110,7 +110,7 @@ class Node extends React.Component {
             }
              {
                Math.round(items.cpu.usage) > 33 && 
-               <strong class="text-danger">{Math.round((items.cpu.usage))} %</strong>
+               <strong className="text-danger">{Math.round((items.cpu.usage))} %</strong>
             }
             </li>
             <li className="list-group-item d-flex justify-content-between">

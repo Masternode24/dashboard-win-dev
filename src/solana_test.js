@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SolanaMain extends React.Component { 
+class SolanaTest extends React.Component { 
      /**
      * constructor
      *
@@ -21,7 +21,7 @@ class SolanaMain extends React.Component {
      * Fetch json array of objects from given url and update state.
      */
     componentDidMount() {
-        fetch('https://www.validators.app/api/v1/validators/mainnet/' + this.props.name, 
+        fetch('https://www.validators.app/api/v1/validators/testnet/' + this.props.name, 
         {
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ class SolanaMain extends React.Component {
             },
             mode: 'cors',
             method: "GET",
-        })
+        },)
             .then(res => res.json())
             .then(json => {
                 this.setState({
@@ -48,14 +48,14 @@ class SolanaMain extends React.Component {
      */
     render() {
         var link = this.props.name
-        link = 'https://www.validators.app/api/v1/validators/mainnet/' + link
+        link = 'https://www.validators.app/api/v1/validators/testnet/' + link
         console.log("LINK : " , link)
         const { isLoaded, items } = this.state;
         console.log("SOLANA : ", items)
         if (!isLoaded)
             return (
-        <div className="card mb-4 rounded-3 shadow-sm border-primary">
-        <div className="card-header py-3 text-white bg-primary border-primary">
+        <div className="card mb-4 rounded-3 shadow-sm">
+        <div className="card-header py-3">
         <h4 className="my-0 fw-normal">Solana</h4>
         </div>
         <div className="card-body"><h1 className="card-title pricing-card-title"><small className="text-muted fw-light">Loading ...</small></h1>
@@ -64,8 +64,8 @@ class SolanaMain extends React.Component {
     );
 
     return (
-        <div className="card mb-4 rounded-3 shadow-sm border-primary">
-        <div className="card-header py-3 text-white bg-primary border-primary">
+        <div className="card mb-4 rounded-3 shadow-sm">
+        <div className="card-header py-3">
         <h4 className="my-0 fw-normal">Solana</h4>
         </div>
         <div className="card-body">
@@ -85,4 +85,4 @@ class SolanaMain extends React.Component {
     }
 } 
   
-export {SolanaMain};
+export {SolanaTest};

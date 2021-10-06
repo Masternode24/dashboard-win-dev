@@ -12,6 +12,7 @@ class TerraMain extends React.Component {
         super(props);
 
         this.state = {
+            price: [],
             items: [],
             isLoaded: false
         }
@@ -24,6 +25,16 @@ class TerraMain extends React.Component {
      * Fetch json array of objects from given url and update state.
      */
     componentDidMount() {
+
+        fetch('https://api.binance.com/api/v3/ticker/price?symbol=LUNAUSDT')
+        .then(res => res.json())
+        .then(json => {
+            this.setState({
+                price: json,
+            })
+        }).catch((err) => {
+            console.log(err);
+        });
 
         fetch('https://lcd.terra.dev/staking/validators/'+this.props.name)
             .then(res => res.json())
@@ -46,7 +57,7 @@ class TerraMain extends React.Component {
         var link = this.props.name
         link = 'https://lcd.terra.dev/staking/validators/' + link
         console.log("LINK : " , link)
-        const { isLoaded, items } = this.state;
+        const { isLoaded, items, price } = this.state;
         console.log(items)
         if (!isLoaded)
             return (
@@ -60,6 +71,7 @@ class TerraMain extends React.Component {
 );
 
     return (
+        
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
         <h4 className="my-0 fw-normal">Terra</h4>
@@ -68,8 +80,20 @@ class TerraMain extends React.Component {
         {items.result.description.moniker}
         <h1 className="card-title pricing-card-title">{Math.round(items.result.tokens/1000000).toFixed(0)}<small className="text-muted fw-light">luna</small></h1>
         <ul className="list-unstyled mt-3 mb-4">
+        
+        <button type="button" className="btn btn-dark position-relative">
+        <li>{(Math.round(items.result.tokens/1000000).toFixed(2)*price.price).toFixed(2)} $</li>
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <li>{Math.round(price.price).toFixed(2)} $</li>
+        </span>
+        </button>
+        
+        <li></li>
+
+        <div class="spinner-border spinner-border-sm" role="status"></div>
+
         <li>Block # {items.height}</li>
-        <li>Jailed : {items.result.jailed}</li>
+        <li>Jailed : {items.result.status}</li>
         <li>Commision : {items.result.commission.commission_rates.rate*100} %</li>
         </ul>
         <a href={link}>
@@ -77,6 +101,7 @@ class TerraMain extends React.Component {
         </a>
         </div>
         </div>
+        
         );
     }
 } 

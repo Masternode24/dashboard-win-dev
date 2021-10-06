@@ -11,8 +11,10 @@ import { RegenMain } from './regen_main';
 import { BitSongMain } from './bitsong_main';
 import { VelasMain } from './velas_main';
 import { SolanaMain } from './solana_main';
+import { SolanaTest } from './solana_test';
 import { PolkadotMain } from './polkadot_main';
 import { Node } from './node';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -86,9 +88,16 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <SolanaMain name="iva1az3y7j3ncfxude5t9n9sry39acgn7dpejds8gf" />
+    <SolanaMain name="6h9jyRgfpmgXNyaWpbDpbxbCoF56WEbzsruhMwDn2om4" />
   </React.StrictMode>,
   document.getElementById('solana_1')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <SolanaTest name="GFFuGhyHAr2fjH1DL42m9EWpAWXXdZ7R6PyzuMzDodLy" />
+  </React.StrictMode>,
+  document.getElementById('solana_2')
 );
 
 ReactDOM.render(
@@ -180,6 +189,13 @@ ReactDOM.render(
     <Node name="http://162.55.242.56:3000" />
   </React.StrictMode>,
   document.getElementById('node_12')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://162.55.242.56:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_13')
 );
 
 // If you want to start measuring performance in your app, pass a function
