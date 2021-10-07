@@ -10,6 +10,7 @@ class SolanaTest extends React.Component {
       constructor(props) {
         super(props);
         this.state = {
+            price: [],
             items: [],
             isLoaded: false
         }
@@ -21,6 +22,17 @@ class SolanaTest extends React.Component {
      * Fetch json array of objects from given url and update state.
      */
     componentDidMount() {
+
+        fetch('https://api.binance.com/api/v3/ticker/price?symbol=SOLUSDT')
+        .then(res => res.json())
+        .then(json => {
+            this.setState({
+                price: json,
+            })
+        }).catch((err) => {
+            console.log(err);
+        });
+
         fetch('https://www.validators.app/api/v1/validators/testnet/' + this.props.name, 
         {
             headers: {
@@ -50,7 +62,7 @@ class SolanaTest extends React.Component {
         var link = this.props.name
         link = 'https://www.validators.app/api/v1/validators/testnet/' + link
         console.log("LINK : " , link)
-        const { isLoaded, items } = this.state;
+        const { isLoaded, items, price } = this.state;
         console.log("SOLANA : ", items)
         if (!isLoaded)
             return (
@@ -72,6 +84,18 @@ class SolanaTest extends React.Component {
         {items.name}
         <h1 className="card-title pricing-card-title">{Math.round(items.active_stake/1000000000).toFixed(0)}<small className="text-muted fw-light">sol</small></h1>
         <ul className="list-unstyled mt-3 mb-4">
+
+        <button type="button" className="btn btn-dark position-relative">
+        <li>{(Math.round(items.active_stake/1000000000).toFixed(2)*price.price).toFixed(2)} $</li>
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <li>{Math.round(price.price).toFixed(2)} $</li>
+        </span>
+        </button>
+        
+        <li></li>
+
+        <div className="spinner-border spinner-border-sm" role="status"></div>
+
         <li>Epoch # {items.epoch} / Skipped Slots : {items.skipped_slots}</li>
         <li>Jailed : {items.delinquent.toString()}</li>
         <li>Commision : {items.commission} %</li>

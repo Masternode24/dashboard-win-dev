@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SolanaMain extends React.Component { 
+class CosmosMain extends React.Component { 
      /**
      * constructor
      *
@@ -23,7 +23,7 @@ class SolanaMain extends React.Component {
      */
     componentDidMount() {
 
-        fetch('https://api.binance.com/api/v3/ticker/price?symbol=SOLUSDT')
+        fetch('https://api.binance.com/api/v3/ticker/price?symbol=ATOMUSDT')
         .then(res => res.json())
         .then(json => {
             this.setState({
@@ -33,12 +33,8 @@ class SolanaMain extends React.Component {
             console.log(err);
         });
 
-        fetch('https://www.validators.app/api/v1/validators/mainnet/' + this.props.name, 
+        fetch('https://api.cosmos.network/cosmos/staking/v1beta1/validators/' + this.props.name, 
         {
-            headers: {
-                'Content-Type': 'application/json',
-                'Token': 'PxVMH4KK32mAwVVUQTRpiYvn'
-            },
             mode: 'cors',
             method: "GET",
         })
@@ -60,15 +56,15 @@ class SolanaMain extends React.Component {
      */
     render() {
         var link = this.props.name
-        link = 'https://www.validators.app/api/v1/validators/mainnet/' + link
+        link = 'https://api.cosmos.network/cosmos/staking/v1beta1/validators/' + link
         console.log("LINK : " , link)
         const { isLoaded, items, price } = this.state;
-        console.log("SOLANA : ", items)
+        console.log("COSMOS : ", items)
         if (!isLoaded)
             return (
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
-        <h4 className="my-0 fw-normal">Solana</h4>
+        <h4 className="my-0 fw-normal">Cosmos</h4>
         </div>
         <div className="card-body"><h1 className="card-title pricing-card-title"><small className="text-muted fw-light">Loading ...</small></h1>
         </div>
@@ -76,17 +72,18 @@ class SolanaMain extends React.Component {
     );
 
     return (
+        
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
-        <h4 className="my-0 fw-normal">Solana</h4>
+        <h4 className="my-0 fw-normal">Cosmos</h4>
         </div>
         <div className="card-body">
-        {items.name}
-        <h1 className="card-title pricing-card-title">{Math.round(items.active_stake/1000000000).toFixed(0)}<small className="text-muted fw-light">sol</small></h1>
+        {items.validator.description.moniker}
+        <h1 className="card-title pricing-card-title">{Math.round(items.validator.tokens/1000000).toFixed(0)}<small className="text-muted fw-light">atom</small></h1>
         <ul className="list-unstyled mt-3 mb-4">
-
+        
         <button type="button" className="btn btn-dark position-relative">
-        <li>{(Math.round(items.active_stake/1000000000).toFixed(2)*price.price).toFixed(2)} $</li>
+        <li>{(Math.round(items.validator.tokens/1000000).toFixed(2)*price.price).toFixed(2)} $</li>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
         <li>{Math.round(price.price).toFixed(2)} $</li>
         </span>
@@ -96,17 +93,18 @@ class SolanaMain extends React.Component {
 
         <div className="spinner-border spinner-border-sm" role="status"></div>
 
-        <li>Epoch # {items.epoch} / Skipped Slots : {items.skipped_slots}</li>
-        <li>Jailed : {items.delinquent.toString()}</li>
-        <li>Commision : {items.commission} %</li>
+        <li>Block # {items.validator.unbonding_height}</li>
+        <li>Jailed : {items.validator.jailed.toString()}</li>
+        <li>Commision : {items.validator.commission.commission_rates.rate*100} %</li>
         </ul>
         <a href={link}>
         <button type="button" className="w-100 btn btn-lg btn-primary">More Info</button>
         </a>
         </div>
         </div>
+        
         );
     }
 } 
   
-export {SolanaMain};
+export {CosmosMain};

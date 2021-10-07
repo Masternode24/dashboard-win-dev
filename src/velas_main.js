@@ -10,6 +10,7 @@ class VelasMain extends React.Component {
       constructor(props) {
         super(props);
         this.state = {
+            price: [],
             items: [],
             isLoaded: false
         }
@@ -21,6 +22,17 @@ class VelasMain extends React.Component {
      * Fetch json array of objects from given url and update state.
      */
     componentDidMount() {
+
+        fetch('https://api.binance.com/api/v3/ticker/price?symbol=IRISUSDT')
+        .then(res => res.json())
+        .then(json => {
+            this.setState({
+                price: json,
+            })
+        }).catch((err) => {
+            console.log(err);
+        });
+
         fetch('http://sentry-1.mainnet.irisnet.org:1317/cosmos/staking/v1beta1/validators/' + this.props.name, 
         {
             mode: 'cors',
@@ -46,7 +58,7 @@ class VelasMain extends React.Component {
         var link = this.props.name
         link = 'http://sentry-1.mainnet.irisnet.org:1317/cosmos/staking/v1beta1/validators/' + link
         console.log("LINK : " , link)
-        const { isLoaded, items } = this.state;
+        const { isLoaded, items, price } = this.state;
         console.log("VELAS : ", items)
         if (!isLoaded)
             return (
@@ -68,6 +80,18 @@ class VelasMain extends React.Component {
         {items.validator.description.moniker}
         <h1 className="card-title pricing-card-title">{Math.round(items.validator.tokens/1000000).toFixed(0)}<small className="text-muted fw-light">iris</small></h1>
         <ul className="list-unstyled mt-3 mb-4">
+
+        <button type="button" className="btn btn-dark position-relative">
+        <li>{(Math.round(items.validator.tokens/1000000).toFixed(2)*price.price).toFixed(2)} $</li>
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <li>{Math.round(price.price).toFixed(2)} $</li>
+        </span>
+        </button>
+        
+        <li></li>
+
+        <div className="spinner-border spinner-border-sm" role="status"></div>
+
         <li>Block # No Info</li>
         <li>Jailed : {items.validator.jailed.toString()}</li>
         <li>Commision : {items.validator.commission.commission_rates.rate*100} %</li>

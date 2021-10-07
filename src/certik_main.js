@@ -94,7 +94,7 @@ class CertikMain extends React.Component {
         
         <li></li>
 
-        <div class="spinner-border spinner-border-sm" role="status"></div>
+        <div className="spinner-border spinner-border-sm" role="status"></div>
 
         <li>Block # {items.height}</li>
         <li>Jailed : No Info</li>

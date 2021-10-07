@@ -90,7 +90,7 @@ class IRISMain extends React.Component {
         
         <li></li>
 
-        <div class="spinner-border spinner-border-sm" role="status"></div>
+        <div className="spinner-border spinner-border-sm" role="status"></div>
 
         <li>Block # No Info</li>
         <li>Jailed : {items.validator.jailed.toString()}</li>
