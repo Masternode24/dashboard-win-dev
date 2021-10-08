@@ -56,7 +56,7 @@ class IRISMain extends React.Component {
      */
     render() {
         var link = this.props.name
-        link = 'http://sentry-1.mainnet.irisnet.org:1317/cosmos/staking/v1beta1/validators/' + link
+        link = 'https://iris.bigdipper.live/validator/' + link
         console.log("LINK : " , link)
         const { isLoaded, items, price } = this.state;
         console.log("IRIS : ", items)
@@ -74,7 +74,7 @@ class IRISMain extends React.Component {
     return (
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
-        <h4 className="my-0 fw-normal">IRIS</h4>
+        <h4 className="my-0 fw-normal">IRIS <a href={link} className="text-white"><i className="bi bi-box-arrow-in-up-right"></i></a></h4>
         </div>
         <div className="card-body">
         {items.validator.description.moniker}

@@ -55,7 +55,7 @@ class TerraMain extends React.Component {
      */
     render() {
         var link = this.props.name
-        link = 'https://lcd.terra.dev/staking/validators/' + link
+        link = 'https://finder.terra.money/columbus-4/validator/' + link
         console.log("LINK : " , link)
         const { isLoaded, items, price } = this.state;
         console.log(items)
@@ -74,7 +74,7 @@ class TerraMain extends React.Component {
         
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
-        <h4 className="my-0 fw-normal">Terra</h4>
+        <h4 className="my-0 fw-normal">Terra <a href={link} className="text-white"><i className="bi bi-box-arrow-in-up-right"></i></a></h4>
         </div>
         <div className="card-body">
         {items.result.description.moniker}
@@ -82,9 +82,9 @@ class TerraMain extends React.Component {
         <ul className="list-unstyled mt-3 mb-4">
         
         <button type="button" className="btn btn-dark position-relative">
-        <li>{(Math.round(items.result.tokens/1000000).toFixed(2)*price.price).toFixed(2)} $</li>
+        <li>{Math.round(items.result.tokens*price.price*1000/1000000000).toFixed(0)} $</li>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-        <li>{Math.round(price.price).toFixed(2)} $</li>
+        <li>{price.price*100/100} $</li>
         </span>
         </button>
         

@@ -54,7 +54,7 @@ class KavaMain extends React.Component {
      */
     render() {
         var link = this.props.name
-        link = 'https://kava4.data.kava.io/staking/validators/' + link
+        link = 'https://kavascan.com/validators/' + link
         console.log("LINK : " , link)
         const { isLoaded, items, price } = this.state;
         console.log(items)
@@ -72,7 +72,7 @@ class KavaMain extends React.Component {
     return (
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
-        <h4 className="my-0 fw-normal">Kava</h4>
+        <h4 className="my-0 fw-normal">Kava <a href={link} className="text-white"><i className="bi bi-box-arrow-in-up-right"></i></a></h4>
         </div>
         <div className="card-body">
         {items.result.description.moniker}
