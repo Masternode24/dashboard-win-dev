@@ -64,7 +64,7 @@ class IRISMain extends React.Component {
             return (
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
-        <h4 className="my-0 fw-normal">IRIS</h4>
+        <h4 className="my-0 fw-normal">Iris</h4>
         </div>
         <div className="card-body"><h1 className="card-title pricing-card-title"><small className="text-muted fw-light">Loading ...</small></h1>
         </div>
@@ -74,7 +74,7 @@ class IRISMain extends React.Component {
     return (
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
-        <h4 className="my-0 fw-normal">IRIS <a href={link} className="text-white"><i className="bi bi-box-arrow-in-up-right"></i></a></h4>
+        <h4 className="my-0 fw-normal">Iris <a href={link} className="text-white"><i className="bi bi-box-arrow-in-up-right"></i></a></h4>
         </div>
         <div className="card-body">
         {items.validator.description.moniker}

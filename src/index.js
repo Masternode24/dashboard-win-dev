@@ -82,9 +82,16 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <VelasMain name="iva1az3y7j3ncfxude5t9n9sry39acgn7dpejds8gf" />
+    <VelasMain name="8rmw3sav8hL2a72qg7otPuFYh5r8bt92si9AZjgZidGN" />
   </React.StrictMode>,
   document.getElementById('velas_1')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <VelasMain name="GgjTRK674pyZuCgUmZDaeT1u5PahhxVMviF2TWbDdYty" />
+  </React.StrictMode>,
+  document.getElementById('velas_2')
 );
 
 ReactDOM.render(

@@ -1,1 +1,5 @@
+COIN :
 https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=
+
+VELAS :
+curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "id":1, "method":"getBalance", "params":["68sonvZZ9oeEuUsCvPqRMk36RjeQCp3BjJ1ZKvRM3L8m"]}' https://api.velas.com

@@ -58,7 +58,7 @@ class RegenMain extends React.Component {
      */
     render() {
         var link = this.props.name
-        link = 'https://regen.stakesystems.io/staking/validators/' + link
+        link = 'https://regen.aneka.io/validators/' + link
         console.log("LINK : " , link)
         const { isLoaded, items, price } = this.state;
         console.log("REGEN : ", items)
@@ -76,7 +76,7 @@ class RegenMain extends React.Component {
     return (
         <div className="card mb-4 rounded-3 shadow-sm border-primary">
         <div className="card-header py-3 text-white bg-primary border-primary">
-        <h4 className="my-0 fw-normal">Regen</h4>
+        <h4 className="my-0 fw-normal">Regen <a href={link} className="text-white"><i className="bi bi-box-arrow-in-up-right"></i></a></h4>
         </div>
         <div className="card-body">
         {items.result.description.moniker}
