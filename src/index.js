@@ -129,6 +129,12 @@ ReactDOM.render(
   document.getElementById('polygon_1')
 );
 
+
+
+
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <Node name="http://202.61.253.70:3000" />
@@ -222,14 +228,14 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://202.61.253.70:3000" />
+    <Node name="" />
   </React.StrictMode>,
   document.getElementById('node_14')
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://202.61.253.70:3000" />
+    <Node name="" />
   </React.StrictMode>,
   document.getElementById('node_15')
 );
