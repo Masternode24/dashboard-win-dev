@@ -64,6 +64,10 @@ class Node extends React.Component {
    [ Full API ]
   </a>
             <li className="list-group-item d-flex justify-content-between">
+            <span>Node IP</span>
+            <strong><mark>{items.ip}</mark></strong>
+            </li>
+            <li className="list-group-item d-flex justify-content-between">
             <span>RAM Free</span>
             <strong>{Math.round((items.ram.free)/1000000).toFixed(0)} Mb</strong>
             </li>

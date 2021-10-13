@@ -9,11 +9,12 @@ import { IRISMain } from './iris_main';
 import { CertikMain } from './certik_main';
 import { RegenMain } from './regen_main';
 import { BitSongMain } from './bitsong_main';
-import { VelasMain } from './velas_main';
+// import { VelasMain } from './velas_main';
 import { SolanaMain } from './solana_main';
 import { SolanaTest } from './solana_test';
 import { CosmosMain } from './cosmos_main';
 import { PolygonMain } from './polygon_main';
+// import { GameMain } from './game_main';
 import { Node } from './node';
 
 ReactDOM.render(
@@ -79,19 +80,19 @@ ReactDOM.render(
   document.getElementById('bitsong_1')
 );
 
-ReactDOM.render(
-  <React.StrictMode>
-    <VelasMain name="8rmw3sav8hL2a72qg7otPuFYh5r8bt92si9AZjgZidGN" />
-  </React.StrictMode>,
-  document.getElementById('velas_1')
-);
+//ReactDOM.render(
+//  <React.StrictMode>
+//    <VelasMain name="8rmw3sav8hL2a72qg7otPuFYh5r8bt92si9AZjgZidGN" />
+//  </React.StrictMode>,
+//  document.getElementById('velas_1')
+//);
 
-ReactDOM.render(
-  <React.StrictMode>
-    <VelasMain name="GgjTRK674pyZuCgUmZDaeT1u5PahhxVMviF2TWbDdYty" />
-  </React.StrictMode>,
-  document.getElementById('velas_2')
-);
+//ReactDOM.render(
+//  <React.StrictMode>
+//    <VelasMain name="GgjTRK674pyZuCgUmZDaeT1u5PahhxVMviF2TWbDdYty" />
+//  </React.StrictMode>,
+//  document.getElementById('velas_2')
+//);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -113,6 +114,13 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('cosmos_1')
 );
+
+//ReactDOM.render(
+//  <React.StrictMode>
+//    <GameMain name="cosmosvaloper1lmu2hvm0prpkmacy7lw9uy3wp7fescmsuevrc9" />
+//  </React.StrictMode>,
+//  document.getElementById('game_1')
+//);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -184,18 +192,25 @@ ReactDOM.render(
   document.getElementById('node_9')
 );
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Node name="http://162.55.242.56:3000" />
-  </React.StrictMode>,
-  document.getElementById('node_10')
-);
+//ReactDOM.render(
+//  <React.StrictMode>
+//    <Node name="http://176.9.100.242:3000" />
+//  </React.StrictMode>,
+//  document.getElementById('node_10')
+//);
+
+//ReactDOM.render(
+//  <React.StrictMode>
+//    <Node name="http://162.55.242.56:3000" />
+//  </React.StrictMode>,
+//  document.getElementById('node_11')
+//);
 
 ReactDOM.render(
   <React.StrictMode>
     <Node name="http://162.55.242.56:3000" />
   </React.StrictMode>,
-  document.getElementById('node_11')
+  document.getElementById('node_13')
 );
 
 ReactDOM.render(
@@ -218,6 +233,15 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('node_15')
 );
+
+// GAME
+//ReactDOM.render(
+//  <React.StrictMode>
+//    <Node name="http://202.61.253.70:3000" />
+//  </React.StrictMode>,
+//  document.getElementById('node_16')
+//);
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
