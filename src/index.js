@@ -33,14 +33,14 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <TerraTest name="terravaloper1n9jrtnz57zupejzhu4v0uth9ax5fktdenxy8hm" />
+    <TerraTest name="terravaloper1585ql7lw2mk72e0n4w2vlj6e8mhqyrcmkw4xsa" />
   </React.StrictMode>,
   document.getElementById('terra_3')
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <TerraTest name="terravaloper1f4d3gkp544x8rswn229eas2vsj60uvc8mmppsq" />
+    <TerraTest name="terravaloper10xc5gqge3ckwn8czrn7vvswsaps8ewfj25nj50" />
   </React.StrictMode>,
   document.getElementById('terra_4')
 );
