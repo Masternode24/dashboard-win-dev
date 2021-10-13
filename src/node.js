@@ -68,28 +68,12 @@ class Node extends React.Component {
             <strong><mark>{items.ip}</mark></strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
-            <span>RAM Free</span>
-            <strong>{Math.round((items.ram.free)/1000000).toFixed(0)} Mb</strong>
+            <span>Catch Up</span>
+            <strong><mark>TESTING ...</mark></strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
-            <span>RAM Total</span>
-            <strong>{Math.round((items.ram.total)/1000000).toFixed(0)} Mb</strong>
-            </li>
-            <li className="list-group-item d-flex justify-content-between">
-            <span>RAM Used</span>
-            <strong>{Math.round((items.ram.usage)/1000000).toFixed(0)} Mb</strong>
-            </li>
-            <li className="list-group-item d-flex justify-content-between">
-            <span>Disk Free</span>
-            <strong>{Math.round((items.disks[1].free)/1000000).toFixed(0)}</strong>
-            </li>
-            <li className="list-group-item d-flex justify-content-between">
-            <span>Disk Size</span>
-            <strong>{Math.round((items.disks[1].size)/1000000).toFixed(0)}</strong>
-            </li>
-            <li className="list-group-item d-flex justify-content-between">
-            <span>Disk Used</span>
-            <strong>{Math.round((items.disks[1].used)/1000000).toFixed(0)}</strong>
+            <span>RAM T/F/U</span>
+            <strong>{Math.round((items.ram.total)/1000000).toFixed(0)} / {Math.round((items.ram.free)/1000000).toFixed(0)} / {Math.round((items.ram.usage)/1000000).toFixed(0)} Mb</strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
             <span>Mount Point  [ {items.disks[0].mountPoint} ] </span>
@@ -99,11 +83,11 @@ class Node extends React.Component {
              <span>Mount Point [ {items.disks[1].mountPoint} ]</span>
             {
                 Math.round((items.disks[1].percent)).toFixed(0) > 85 && 
-                <strong className="text-danger">{Math.round((items.disks[1].percent)).toFixed(0)}</strong>
+                <strong className="text-danger">{Math.round((items.disks[1].percent)).toFixed(0)} %</strong>
             }
             {
                 Math.round((items.disks[1].percent)).toFixed(0) < 85 && 
-                <strong>{Math.round((items.disks[1].percent)).toFixed(0)}</strong>
+                <strong>{Math.round((items.disks[1].percent)).toFixed(0)} %</strong>
             }
             </li>
             <li className="list-group-item d-flex justify-content-between">
