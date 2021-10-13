@@ -96,7 +96,17 @@ class RegenMain extends React.Component {
 
 
         <li>Block # {items.height}</li>
-        <li>Jailed : No Info</li>
+        
+        {   items.result.status === 1 &&
+            <li>Jailed : true</li>
+        }
+        {   items.result.status === 3 &&
+            <li>Jailed : false</li>
+        }
+        {   items.result.status === 2 &&
+            <li>Jailed : check</li>
+        }
+
         <li>Commision : {items.result.commission.commission_rates.rate*100} %</li>
         </ul>
         <a href={link}>
