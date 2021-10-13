@@ -98,7 +98,7 @@ class TerraMain extends React.Component {
             <li>Jailed : true</li>
         }
         {   items.result.status === 3 &&
-            <li>Jailed : false</li>
+            <li>Jailed : OK</li>
         }
         {   items.result.status === 2 &&
             <li>Jailed : check</li>
