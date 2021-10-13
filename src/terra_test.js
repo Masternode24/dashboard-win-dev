@@ -91,7 +91,7 @@ class TerraTest extends React.Component {
         <div className="spinner-border spinner-border-sm" role="status"></div>
 
         <li>Block # {items.height}</li>
-        <li>Jailed : {items.result.jailed.toString()}</li>
+        <li>Jailed : {items.result.status}</li>
         <li>Commision : {items.result.commission.commission_rates.rate*100} %</li>
         </ul>
         <a href={link}>
