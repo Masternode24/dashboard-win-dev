@@ -16,7 +16,6 @@ import { CosmosMain } from './cosmos_main';
 import { PolygonMain } from './polygon_main';
 import { Node } from './node';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <TerraMain name="terravaloper15qjn7ke9s47qn4mte3lerkxtjjgp38n5qquzsu"/>
