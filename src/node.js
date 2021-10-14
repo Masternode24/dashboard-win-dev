@@ -65,7 +65,7 @@ class Node extends React.Component {
   </a>
             <li className="list-group-item d-flex justify-content-between">
             <span>Node IP</span>
-            <strong><mark>{items.ip}</mark></strong>
+            <strong>{items.ip}</strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
             <span>Catch Up</span>
