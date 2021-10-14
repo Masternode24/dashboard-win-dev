@@ -81,9 +81,9 @@ class TerraMain extends React.Component {
         <h1 className="card-title pricing-card-title">{Math.round(items.result.tokens/1000000).toFixed(0)}<small className="text-muted fw-light">luna</small></h1>
         <ul className="list-unstyled mt-3 mb-4">
         
-        <button type="button" className="btn btn-dark position-relative">
+        <button type="button" className="btn btn-outline-dark position-relative">
         <li>{Math.round(items.result.tokens*price.price*1000/1000000000).toFixed(0)} $</li>
-        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
         <li>{price.price*100/100} $</li>
         </span>
         </button>

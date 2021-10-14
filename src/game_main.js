@@ -85,8 +85,8 @@ class GameMain extends React.Component {
     */}
         <ul className="list-unstyled mt-3 mb-4">
     {/*
-        <button type="button" className="btn btn-dark position-relative">
-        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <button type="button" className="btn btn-outline-dark position-relative">
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
         </span>
         </button>
     */}
