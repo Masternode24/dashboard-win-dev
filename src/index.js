@@ -241,7 +241,7 @@ ReactDOM.render(
 // GAME
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://202.61.253.70:3000" />
+    <Node name="http://94.130.9.22:3000" />
   </React.StrictMode>,
   document.getElementById('node_10')
 );
