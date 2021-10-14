@@ -15,6 +15,7 @@ import { SolanaTest } from './solana_test';
 import { CosmosMain } from './cosmos_main';
 import { PolygonMain } from './polygon_main';
 import { GameMain } from './game_main';
+import { PolkadotMain } from './polkadot_main';
 import { Node } from './node';
 
 ReactDOM.render(
@@ -117,6 +118,13 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
+    <PolkadotMain name="" />
+  </React.StrictMode>,
+  document.getElementById('polkadot_1')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
     <GameMain name="" />
   </React.StrictMode>,
   document.getElementById('game_1')
@@ -192,18 +200,20 @@ ReactDOM.render(
   document.getElementById('node_9')
 );
 
+// SOLANA MAIN
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://" />
-  </React.StrictMode>,
-  document.getElementById('node_13')
-);
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Node name="http://" />
+    <Node name="http://141.95.33.39:3000" />
   </React.StrictMode>,
   document.getElementById('node_12')
+);
+
+// POLKADOT MAIN
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://195.201.8.46:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_13')
 );
 
 // COSMOS
@@ -245,7 +255,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('node_10')
 );
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
