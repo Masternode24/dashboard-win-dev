@@ -234,9 +234,10 @@ ReactDOM.render(
   document.getElementById('node_14')
 );
 
+// POLYGON
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="" />
+    <Node name="http://45.157.177.177:3001" />
   </React.StrictMode>,
   document.getElementById('node_15')
 );
