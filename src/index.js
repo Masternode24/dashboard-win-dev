@@ -213,7 +213,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Node name="http://195.201.8.46:3000" />
   </React.StrictMode>,
-  document.getElementById('node_13')
+  document.getElementById('node_18')
 );
 
 // COSMOS
