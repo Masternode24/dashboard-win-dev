@@ -194,14 +194,14 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://162.55.242.56:3000" />
+    <Node name="http://" />
   </React.StrictMode>,
   document.getElementById('node_13')
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Node name="http://162.55.242.56:3000" />
+    <Node name="http://" />
   </React.StrictMode>,
   document.getElementById('node_12')
 );
