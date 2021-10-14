@@ -72,6 +72,10 @@ class Node extends React.Component {
             <strong><mark>TESTING ...</mark></strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
+            <span>Service Ver.</span>
+            <strong><mark>TESTNIG ...</mark></strong>
+            </li>
+            <li className="list-group-item d-flex justify-content-between">
             <span>RAM T/F/U</span>
             <strong>{Math.round((items.ram.total)/1000000).toFixed(0)} / {Math.round((items.ram.free)/1000000).toFixed(0)} / {Math.round((items.ram.usage)/1000000).toFixed(0)} Mb</strong>
             </li>
