@@ -73,7 +73,7 @@ class Node extends React.Component {
             </li>
             <li className="list-group-item d-flex justify-content-between">
             <span>Last Update</span>
-            <strong><mark>TESTNIG ...</mark></strong>
+            <strong><mark>{items.ver_terra}</mark></strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
             <span>RAM T/F/U</span>
