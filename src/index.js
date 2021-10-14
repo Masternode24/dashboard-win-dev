@@ -118,7 +118,7 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <PolkadotMain name="" />
+    <PolkadotMain name="cosmosvaloper1lmu2hvm0prpkmacy7lw9uy3wp7fescmsuevrc9" />
   </React.StrictMode>,
   document.getElementById('polkadot_1')
 );

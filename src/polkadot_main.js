@@ -34,7 +34,7 @@ class PolkadotMain extends React.Component {
             console.log(err);
         });
 
-        fetch('HTTP' + this.props.name, 
+        fetch('https://api.cosmos.network/cosmos/staking/v1beta1/validators/' + this.props.name, 
         {
             mode: 'cors',
             method: "GET",
