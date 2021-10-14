@@ -9,7 +9,7 @@ import { IRISMain } from './iris_main';
 import { CertikMain } from './certik_main';
 import { RegenMain } from './regen_main';
 import { BitSongMain } from './bitsong_main';
-// import { VelasMain } from './velas_main';
+import { VelasMain } from './velas_main';
 import { SolanaMain } from './solana_main';
 import { SolanaTest } from './solana_test';
 import { CosmosMain } from './cosmos_main';
@@ -80,19 +80,19 @@ ReactDOM.render(
   document.getElementById('bitsong_1')
 );
 
-//ReactDOM.render(
-//  <React.StrictMode>
-//    <VelasMain name="8rmw3sav8hL2a72qg7otPuFYh5r8bt92si9AZjgZidGN" />
-//  </React.StrictMode>,
-//  document.getElementById('velas_1')
-//);
+ReactDOM.render(
+  <React.StrictMode>
+    <VelasMain name="8rmw3sav8hL2a72qg7otPuFYh5r8bt92si9AZjgZidGN" />
+  </React.StrictMode>,
+  document.getElementById('velas_1')
+);
 
-//ReactDOM.render(
-//  <React.StrictMode>
-//    <VelasMain name="GgjTRK674pyZuCgUmZDaeT1u5PahhxVMviF2TWbDdYty" />
-//  </React.StrictMode>,
-//  document.getElementById('velas_2')
-//);
+ReactDOM.render(
+  <React.StrictMode>
+    <VelasMain name="GgjTRK674pyZuCgUmZDaeT1u5PahhxVMviF2TWbDdYty" />
+  </React.StrictMode>,
+  document.getElementById('velas_2')
+);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -240,6 +240,22 @@ ReactDOM.render(
     <Node name="http://45.157.177.177:3001" />
   </React.StrictMode>,
   document.getElementById('node_15')
+);
+
+// VELAS - MN24
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://176.9.100.242:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_16')
+);
+
+// VELAS - Masternode24
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://162.55.242.56:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_17')
 );
 
 // GAME

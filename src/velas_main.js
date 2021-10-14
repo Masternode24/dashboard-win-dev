@@ -23,11 +23,12 @@ class VelasMain extends React.Component {
      */
     componentDidMount() {
 
-        fetch('https://api.binance.com/api/v3/ticker/price?symbol=IRISUSDT')
+        fetch('https://api.binance.com/api/v3/ticker/price?symbol=VELASUSDT')
         .then(res => res.json())
         .then(json => {
             this.setState({
                 price: json,
+                isLoaded: true,
             })
         }).catch((err) => {
             console.log(err);
@@ -74,7 +75,7 @@ class VelasMain extends React.Component {
         var link = this.props.name
         link = 'https://velasity.com/validator/' + link
         console.log("LINK : " , link)
-        const { isLoaded, items, price } = this.state;
+        const { isLoaded, items } = this.state;
         console.log("VELAS : ", items)
         if (!isLoaded)
             return (
@@ -93,18 +94,14 @@ class VelasMain extends React.Component {
         <h4 className="my-0 fw-normal">Velas <a href={link} className="text-white"><i className="bi bi-box-arrow-in-up-right"></i></a></h4>
         </div>
         <div className="card-body">
-        <h4 className="text-red">{items.result.value}</h4>
-       
+        {/*  <h4 className="text-red">{items.result.value}</h4> */}
         <ul className="list-unstyled mt-3 mb-4">
-            
-        {price.price}
-        <button type="button" className="btn btn-dark position-relative">
-       
+        {/*  {price.price} */}
+        {/*  <button type="button" className="btn btn-dark position-relative"> 
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-
         </span>
         </button>
-        
+        */}
         <li></li>
 
         <div className="spinner-border spinner-border-sm" role="status"></div>
