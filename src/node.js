@@ -72,7 +72,7 @@ class Node extends React.Component {
             <strong><mark>TESTING ...</mark></strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
-            <span>Last Update</span>
+            <span>Ver.</span>
             <strong><mark>{items.ver}</mark></strong>
             </li>
             <li className="list-group-item d-flex justify-content-between">
