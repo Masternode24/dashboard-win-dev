@@ -14,7 +14,7 @@ import { SolanaMain } from './solana_main';
 import { SolanaTest } from './solana_test';
 import { CosmosMain } from './cosmos_main';
 import { PolygonMain } from './polygon_main';
-// import { GameMain } from './game_main';
+import { GameMain } from './game_main';
 import { Node } from './node';
 
 ReactDOM.render(
@@ -115,12 +115,12 @@ ReactDOM.render(
   document.getElementById('cosmos_1')
 );
 
-//ReactDOM.render(
-//  <React.StrictMode>
-//    <GameMain name="cosmosvaloper1lmu2hvm0prpkmacy7lw9uy3wp7fescmsuevrc9" />
-//  </React.StrictMode>,
-//  document.getElementById('game_1')
-//);
+ReactDOM.render(
+  <React.StrictMode>
+    <GameMain name="" />
+  </React.StrictMode>,
+  document.getElementById('game_1')
+);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -128,12 +128,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('polygon_1')
 );
-
-
-
-
-
-
 
 ReactDOM.render(
   <React.StrictMode>
@@ -198,20 +192,6 @@ ReactDOM.render(
   document.getElementById('node_9')
 );
 
-//ReactDOM.render(
-//  <React.StrictMode>
-//    <Node name="http://176.9.100.242:3000" />
-//  </React.StrictMode>,
-//  document.getElementById('node_10')
-//);
-
-//ReactDOM.render(
-//  <React.StrictMode>
-//    <Node name="http://162.55.242.56:3000" />
-//  </React.StrictMode>,
-//  document.getElementById('node_11')
-//);
-
 ReactDOM.render(
   <React.StrictMode>
     <Node name="http://162.55.242.56:3000" />
@@ -259,12 +239,12 @@ ReactDOM.render(
 );
 
 // GAME
-//ReactDOM.render(
-//  <React.StrictMode>
-//    <Node name="http://202.61.253.70:3000" />
-//  </React.StrictMode>,
-//  document.getElementById('node_16')
-//);
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://202.61.253.70:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_10')
+);
 
 
 // If you want to start measuring performance in your app, pass a function

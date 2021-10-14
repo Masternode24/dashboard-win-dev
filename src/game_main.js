@@ -23,17 +23,18 @@ class GameMain extends React.Component {
      */
     componentDidMount() {
 
-        fetch('https://api.binance.com/api/v3/ticker/price?symbol=MATICUSDT')
+        fetch('https://api.binance.com/api/v3/ticker/price?symbol=GAMEUSDT')
         .then(res => res.json())
         .then(json => {
             this.setState({
                 price: json,
+                isLoaded: true, 
             })
         }).catch((err) => {
             console.log(err);
         });
 
-        fetch('https://sentinel.matic.network/api/v2/validators/' + this.props.name, 
+        fetch('HTTP' + this.props.name, 
         {
             mode: 'cors',
             method: "GET",
@@ -58,7 +59,7 @@ class GameMain extends React.Component {
         var link = this.props.name
         link = 'https://game-explorer.io/validators/' + link
         console.log("LINK : " , link)
-        const { isLoaded, items, price } = this.state;
+        const { isLoaded, items } = this.state;
         console.log("COSMOS : ", items)
         if (!isLoaded)
             return (
@@ -78,23 +79,25 @@ class GameMain extends React.Component {
         <h4 className="my-0 fw-normal">Game</h4>
         </div>
         <div className="card-body">
+    {/*
         {items.result}
         {price.price}
-        <ul className="list-unstyled mt-3 mb-4">  
+    */}
+        <ul className="list-unstyled mt-3 mb-4">
+    {/*
         <button type="button" className="btn btn-dark position-relative">
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
         </span>
         </button>
-        
+    */}
         <li></li>
-
         <div className="spinner-border spinner-border-sm" role="status"></div>
-
-       </ul>
+        </ul>
         <a href={link}>
         <button type="button" className="w-100 btn btn-lg btn-primary">More Info</button>
         </a>
         </div>
+        
         </div>
         
         );
