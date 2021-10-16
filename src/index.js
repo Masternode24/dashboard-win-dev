@@ -208,6 +208,13 @@ ReactDOM.render(
   document.getElementById('node_12')
 );
 
+ReactDOM.render(
+  <React.StrictMode>
+    <Node name="http://136.243.79.238:3000" />
+  </React.StrictMode>,
+  document.getElementById('node_13')
+);
+
 // POLKADOT MAIN
 ReactDOM.render(
   <React.StrictMode>
